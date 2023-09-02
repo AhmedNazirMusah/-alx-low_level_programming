@@ -17,12 +17,15 @@ int main(int argc, char *argv[])
 {
 	int sum = 0;
 	bool error = false;
+	int i;
+	int j;
+	int num;
 
-	for (int i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 	char *arg = argv[i];
 
-	for (int j = 0; arg[j] != '\0'; j++)
+	for (j = 0; arg[j] != '\0'; j++)
 	{
 		if (arg[j] < '0' || arg[j] > '9')
 		{
@@ -37,7 +40,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	int num = atoi(arg);
+	num = atoi(arg);
 
 	if (num > 0)
 		{
