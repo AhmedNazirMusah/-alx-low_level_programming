@@ -33,30 +33,23 @@ int main(int argc, char *argv[])
 			break;
 		}
 	}
-
 	if (error)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
 	num = atoi(arg);
-
 	if (num > 0)
 		{
 		sum += num;
 		}
 	}
-
 	if (argc == 1)
 		{
 		printf("0\n");
 		}
 	else
-
 	printf("%d\n", sum);
-
-
 	return (0);
 }
 
