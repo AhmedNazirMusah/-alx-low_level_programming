@@ -1,65 +1,23 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-
 /**
- *create_array - Creates the array and initialize it with a character.
- *@size: the size of the array.
- *@c: The character to initialize the array.
+ * create_array - create array of size size and assign char c
+ * @size: size of array
+ * @c: char to assign
+ * Description: create array of size size and assign char c
+ * Return: pointer to array, NULL if fail
  *
- *Return: A pointer to the initialized array or Null.
  */
-
-char *create_array(unsigned int size, char __attribute__((unused)) c)
+char *create_array(unsigned int size, char c)
 {
-
-unsigned int i;
-char *arr;
-
-if (size == 0)
-	return (NULL);
-
-arr = (char *)malloc(size * sizeof(char));
-
-if (arr == NULL)
-	return (NULL);
-
-for (i = 0; i < size; i++)
-{
-	arr[i] = c;
-}
-
-return (arr);
-}
-
-/**
- * main - Prints the array if created
- *
- *Return: returns 0.
- */
-
-int main(void)
-{
-	unsigned int size = 10;
-	char c = 'A';
+	char *str;
 	unsigned int i;
 
-	char *result = create_array(size, c);
+	str = malloc(sizeof(char) * size);
+	if (size == 0 || str == NULL)
+		return (NULL);
 
-	if (result != NULL)
-	{
-		printf("array created: ");
-
-		for (i = 0; i < size; i++)
-		{
-			printf("%c ", result[i]);
-		}
-
-		printf("\n");
-
-		free(result);
-	} else
-		printf("faild to create array.\n");
-
-	return (0);
+	for (i = 0; i < size; i++)
+		str[i] = c;
+	return (str);
 }
