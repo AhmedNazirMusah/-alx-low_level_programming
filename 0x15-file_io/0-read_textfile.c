@@ -4,7 +4,7 @@
 /**
  * read_textfile- Read the text file.
  * @filename: text file reading.
- * @letters: number of letters 
+ * @letters: number of letters.
  * Return: w- actual number of bytes read and printed
  *        0 when function fails or filename is NULL.
  */
